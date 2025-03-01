@@ -1,0 +1,60 @@
+body {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+.container {
+    position: relative;
+    width: 700px;
+    margin: 50px auto;
+}
+.wheel {
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    border: 10px solid #333;
+    position: relative;
+    transition: transform 4s ease-out;
+    background: conic-gradient(
+        red 0deg 60deg,
+        yellow 60deg 120deg,
+        green 120deg 180deg,
+        blue 180deg 240deg,
+        orange 240deg 300deg,
+        purple 300deg 360deg
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.wheel span {
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    text-align: center;
+    width: 60px;
+}
+.pointer {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid red;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
